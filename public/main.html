@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html ng-app="pinapp">
+  
+  <head>
+    <title>PinFavs App</title>
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/public/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kreon', rel='stylesheet', type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cookie', rel='stylesheet', type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Abel', rel='stylesheet', type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Teko', rel='stylesheet', type='text/css'>
+    
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="https://code.angularjs.org/1.6.4/angular-resource.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="controllers/clickController.client.js"></script>        
+  </head>
+  
+  <body ng-controller="appController">
+    
+    <header>
+      <a id="logo" href="/">PinFavs</a>
+      <a class="menu" href="/auth/github" ng-hide="logged">Login <i class="fa fa-github fa-lg"></i></a>      
+      <a href="/logout" ng-show="logged">Logout <i class="fa fa-github fa-lg"></i></a>
+      <a href="/profile" ng-show="logged">Profile</a>
+      <a> <span id="logger"> Visiting as</span> <span style="font-weight:bold;font-size:20px;color:rgb(124, 252, 0);">{{loginName}}! </span> </a>
+    </header>
+    
+    <div class="gallery">
+      <div class="grid pinmasonry" reload="reload" selected="selected" append="append" picture="picture" hearts="hearts">
+        
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <div ng-repeat="image in list">
+          
+          <div class="grid-item">
+            <div id="imgback"><img class="fallback" ng-src="{{image.src}}"/> </div>
+            <div class="description">
+              <span>{{image.caption}}</span>
+              <br/>
+              <span id="user"><a ng-click="visit(image.username)">{{image.username}}</a></span>
+              <span id="likes"><span>{{image.likes}}</span>
+                <button ng-click="addlike(image)"><i class="fa fa-heart" aria-hidden="true"></i></button>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+                
+      </div>
+    </div>
+
+    <div style="height:100px"></div> <!-- Div to create space to avoid the last results covered by the footer -->
+    
+    <footer>
+			<p id="copyright"> Copyright © 2017 Yasmin Melean </p>
+      <div id="links">
+			  <a href="https://www.freecodecamp.com/meleany" target="_blank">
+          <i class="fa fa-free-code-camp fa-2x fa-fw"></i>
+			  </a>
+			  <a href="https://github.com/meleany" target="_blank">
+				  <i class="fa fa-github-alt fa-2x"></i>
+			  </a>
+			  <a href="https://codepen.io/meleany" target="_blank">
+				  <i class="fa fa-codepen fa-2x"></i>
+			  </a>
+			  <a href="https://ymelbart.wordpress.com" target="_blank"> 
+				  <i class="fa fa-wordpress fa-2x"></i>
+			  </a>
+      </div>    
+    </footer>
+    
+  </body>
+  
+</html>

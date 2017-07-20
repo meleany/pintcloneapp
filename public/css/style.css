@@ -1,0 +1,311 @@
+/***** Main Styling *****/
+
+* { box-sizing: border-box; }
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Teko";
+  color: rgb(255, 255, 255);
+  background: linear-gradient(rgba(255, 183, 181, 0.3), rgb(255, 255, 255)) fixed;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 0;  
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
+
+.fa {
+  vertical-align: middle;  
+}
+
+/***** Header Styling *****/
+
+header {
+  font-family: "Kreon";
+	font-size: 18px;
+	color: rgb(255,255,255);
+	background-color: rgb(30, 38, 40);
+	height: 60px;
+}
+
+header a{
+	float: right;
+	display: block;
+	padding: 10px;
+  color: rgb(255, 255, 255);
+}
+
+#logo {
+  font-family: "Cookie";
+  color:rgb(255, 226, 221);
+  font-size: 50px;
+  vertical-align: top;
+  padding-bottom: 20px;
+  margin-left: 50px;
+	float: left;
+}
+
+#addbutton {
+  font-family: "Kreon";
+  font-size: 18px;
+  text-align: center;
+	float: left;
+	display: block;
+	padding: 5px;
+  color: rgb(255, 255, 255); 
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+/***** Footer Styling *****/
+
+footer {
+  font-family: "Abel";
+  color: rgb(255, 255, 255);
+  background-color: rgb(30, 38, 40);  
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: rgb(255,255,255);
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.9);  
+  padding: 6px;
+}
+
+footer .fa {
+  font-size: 26px;  
+}
+
+#copyright {
+  float: left;
+  margin-left: 30px;
+}
+
+#links {
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+/***** Masonry Styling *****/
+
+.gallery {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.grid {
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 2%;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 18%;
+}
+
+.gutter-sizer {
+  width: 1.5%;
+}
+
+.grid-item {
+  box-shadow: 2px 2px 2px rgb(30, 38, 40);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  max-width: 95%;
+  margin: auto;
+  padding-top: 4px;
+  padding-bottom: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+#imgback {
+  background-color: rgba(255, 132, 132, 0.8);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.description {
+  color: rgb(30, 38, 40);
+  text-align: center;  
+  height: 60px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#user {
+  margin-left: 10px;
+  float: left;
+  cursor: pointer;
+}
+
+#likes {
+  margin-right: 10px;
+  float: right;
+}
+
+#likes button {
+  border: none;  
+}
+
+/**** Modal Styling *****/
+
+form {
+  background-color: rgba(255, 132, 132, 0.5);
+  margin: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+fieldset {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-left: 30px;
+}
+
+input[type=text]{
+	width: 90%;
+	display: block;
+  border: 1px solid #ccc;	
+  box-sizing: border-box;	
+	border-radius: 5px;
+	margin: 10px auto;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  right: 0;
+  margin-top: 100px;  
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 700px;
+  height: 270px;
+  font-family: "Kreon";
+  font-size: 19px;
+  text-align: center;
+  color: rgb(0, 0, 0);  
+}
+
+.close i {
+  font-size: 25px;
+  color: rgba(30, 38, 40, 0.4);
+  float: right;
+  margin-right: 5px;
+}
+
+.close i:hover,
+.close i:focus {
+  color: rgba(30, 38, 40, 0.85);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalHead {
+  font-family: "Jomhuria";
+  font-size: 35px;
+  color: rgba(30, 38, 40, 0.75);
+  background-color: rgba(255, 132, 132, 0.07);
+  border: 3px outset rgba(255, 132, 132, 0.5);
+  border-radius: 5px;
+  padding: 8px;
+  height: 50px;  
+}
+
+#modalBody {
+  width: 100%;
+}
+
+.thumbnail {
+  overflow: hidden;
+  display: inline-block;
+  margin: auto;
+  float: right;
+  width: 30%;
+  max-height:230px;
+}
+
+.thumbnail img {
+  max-height: 230px;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+#modalForm {
+ display: inline-block;
+ float: left; 
+ width: 70%;
+}
+
+#pinbutton {
+  font-family: "Cookie";
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 132, 132, 1.0);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#delbutton {
+  font-family: "Cookie";
+  font-size: 25px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#remove {
+  font-size: 15px;
+  border: none;
+  margin-left: 10px; 
+  float: right;
+}
